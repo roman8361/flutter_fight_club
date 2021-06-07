@@ -22,6 +22,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  final String _one = "1";
+
   BodyPart? defendingBodyPart;
   BodyPart? attackingBodyPart;
 
@@ -47,9 +50,9 @@ class _MyHomePageState extends State<MyHomePage> {
           Row(
             children: [
               SizedBox(width: 16),
-              Expanded(child: Center(child: Text("1".toUpperCase()))),
+              Expanded(child: Center(child: Text(_one.toUpperCase()))),
               SizedBox(width: 12),
-              Expanded(child: Center(child: Text("1".toUpperCase()))),
+              Expanded(child: Center(child: Text(_one.toUpperCase()))),
               SizedBox(width: 16)
             ],
           ),
@@ -59,9 +62,9 @@ class _MyHomePageState extends State<MyHomePage> {
           Row(
             children: [
               SizedBox(width: 16),
-              Expanded(child: Center(child: Text("1".toUpperCase()))),
+              Expanded(child: Center(child: Text(_one.toUpperCase()))),
               SizedBox(width: 12),
-              Expanded(child: Center(child: Text("1".toUpperCase()))),
+              Expanded(child: Center(child: Text(_one.toUpperCase()))),
               SizedBox(width: 16)
             ],
           ),
@@ -71,9 +74,9 @@ class _MyHomePageState extends State<MyHomePage> {
           Row(
             children: [
               SizedBox(width: 16),
-              Expanded(child: Center(child: Text("1".toUpperCase()))),
+              Expanded(child: Center(child: Text(_one.toUpperCase()))),
               SizedBox(width: 12),
-              Expanded(child: Center(child: Text("1".toUpperCase()))),
+              Expanded(child: Center(child: Text(_one.toUpperCase()))),
               SizedBox(width: 16)
             ],
           ),
@@ -83,9 +86,9 @@ class _MyHomePageState extends State<MyHomePage> {
           Row(
             children: [
               SizedBox(width: 16),
-              Expanded(child: Center(child: Text("1".toUpperCase()))),
+              Expanded(child: Center(child: Text(_one.toUpperCase()))),
               SizedBox(width: 12),
-              Expanded(child: Center(child: Text("1".toUpperCase()))),
+              Expanded(child: Center(child: Text(_one.toUpperCase()))),
               SizedBox(width: 16)
             ],
           ),
@@ -95,9 +98,9 @@ class _MyHomePageState extends State<MyHomePage> {
           Row(
             children: [
               SizedBox(width: 16),
-              Expanded(child: Center(child: Text("1".toUpperCase()))),
+              Expanded(child: Center(child: Text(_one.toUpperCase()))),
               SizedBox(width: 12),
-              Expanded(child: Center(child: Text("1".toUpperCase()))),
+              Expanded(child: Center(child: Text(_one.toUpperCase()))),
               SizedBox(width: 16)
             ],
           ),
