@@ -22,7 +22,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   final String _one = "1";
 
   BodyPart? defendingBodyPart;
@@ -168,17 +167,21 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               SizedBox(width: 16),
               Expanded(
-                  child: SizedBox(
-                height: 40,
-                child: ColoredBox(
-                  color: Color.fromRGBO(0, 0, 0, 0.87),
-                  child: Center(
-                    child: Text(
-                      "Go".toUpperCase(),
-                      style: TextStyle(
-                          fontWeight: FontWeight.w900,
-                          fontSize: 16,
-                          color: Colors.white),
+                  child: GestureDetector(
+                onTap: () => _resetBodyOnTap(),
+                child: SizedBox(
+                  height: 40,
+                  child: ColoredBox(
+                    color:
+                        (_isBodySelected()) ? Colors.black87 : Colors.black38,
+                    child: Center(
+                      child: Text(
+                        "Go".toUpperCase(),
+                        style: TextStyle(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 16,
+                            color: Colors.white),
+                      ),
                     ),
                   ),
                 ),
@@ -201,6 +204,19 @@ class _MyHomePageState extends State<MyHomePage> {
   void _selectAttackingBodyPart(final BodyPart value) {
     setState(() {
       attackingBodyPart = value;
+    });
+  }
+
+  bool _isBodySelected() {
+    return (defendingBodyPart != null && attackingBodyPart != null);
+  }
+
+  _resetBodyOnTap() {
+    setState(() {
+      if (_isBodySelected()) {
+        defendingBodyPart = null;
+        attackingBodyPart = null;
+      }
     });
   }
 }
@@ -239,11 +255,16 @@ class BodyPartButton extends StatelessWidget {
       child: SizedBox(
         height: 40,
         child: ColoredBox(
-          color: selected
-              ? const Color.fromRGBO(28, 121, 206, 1)
-              : Color.fromRGBO(0, 0, 0, 0.38),
+          color:
+              selected ? const Color.fromRGBO(28, 121, 206, 1) : Colors.black38,
           child: Center(
-            child: Text(bodyPart.name.toUpperCase()),
+            child: Text(
+              bodyPart.name.toUpperCase(),
+              style: TextStyle(
+                  fontSize: 13,
+                  color:
+                      selected ? Colors.white : Color.fromRGBO(6, 13, 20, 1)),
+            ),
           ),
         ),
       ),
